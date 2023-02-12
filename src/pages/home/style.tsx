@@ -1,44 +1,117 @@
-import { styled } from "@/styles/stitches.config";
+import { styled as stl } from "@/styles/stitches.config";
+import styled, { keyframes } from "styled-components";
 import { Flex } from "@/styles/Global";
-import { Button } from "@/styles/Buttons";
 
-import img from "@/public/static/img/background/dots.svg";
-
-export const Header = styled("header", {
+export const Header = stl("header", {
   backgroundColor: "$brand1",
-  padding: "12rem 0 8rem 0",
-  backgroundImage: `url(${img})`,
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "bottom 1rem right 1rem",
+  padding: "4.5rem 0 0.1rem 0",
   "@mobile": {
     padding: "9rem 0 6rem 0",
+    textAlign: "center",
   },
 });
 
-export const HeaderContent = styled("div", {
+export const HeaderContent = stl("div", {
   maxWidth: "100%",
-  width: "36rem",
+  marginTop: "0.5rem",
   display: "flex",
-  flexDirection: "column",
-  gap: "$2",
+  alignItems: "center",
+  justifyContent: "center",
+  flexDirection: "row",
 });
 
-export const HeaderButtonsArea = styled(Flex, {
-  marginTop: "$2",
+export const Banner = stl("div", {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: "5rem",
+  boxShadow: "inset 0px -7px 5px -8px rgba(0,0,0,0.3)",
+  backgroundColor: "$grey7",
+});
+
+export const Static = stl("div", {
+  display: "flex",
+});
+
+export const Div = stl("div", {
+  maxWidth: "300px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  textAlign: "center",
+  visibility: "visible",
   "@mobile": {
-    flexDirection: "column",
-    [`& ${Button}`]: {
-      width: "100%",
-    },
+    maxWidth: "100px",
+    visibility: "hidden",
   },
 });
 
-export const StackSection = styled("section", {
-  backgroundColor: "$grey4",
+export const Dinamic = stl("div", {
+  display: "flex",
+  overflow: "hidden",
+  minWidth: "200px",
+  gap: "2rem",
+  position: "sticky",
+  top: "10rem",
+});
+
+export const DinamicDiv = stl("div", {
+  height: "70px",
+});
+
+const slideTransition = keyframes`
+  100%
+  {
+    top: -460px;
+  }
+`;
+
+const slideTyping = keyframes`
+  40%, 60%
+  {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+`;
+
+export const DinamicList = styled.li`
+  list-style: none;
+  color: white;
+  font-size: 30px;
+  position: relative;
+  top: 0;
+  font-family: Homemade Apple;
+  animation: ${slideTransition} 13s steps(7) infinite;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: brand1;
+    border-left: 2px solid brand1;
+    animation: ${slideTyping} 6s steps(40) infinite;
+  }
+`;
+
+export const AboutMe = stl("section", {
+  display: "flex",
+  backgroundColor: "$brand1",
+  padding: "4rem 0 4rem 0",
+  flexDirection: "column",
+  textAlign: "justify",
+  overflowWrap: "break-word",
+});
+
+export const StackSection = stl("section", {
+  backgroundColor: "$brand4",
   padding: "4rem 0 2rem 0",
 });
 
-export const StackCards = styled("div", {
+export const StackCards = stl("div", {
   display: "grid",
   gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
   padding: "3rem 0",
@@ -52,11 +125,16 @@ export const StackCards = styled("div", {
   },
 });
 
-export const ProjectsArea = styled("section", {
+export const ProjectsArea = stl("section", {
   padding: "4rem 0 8rem 0",
+  background: "$brand3",
+  "@mobile": {
+    flexDirection: "column",
+    justifyContent: "center",
+  },
 });
 
-export const ProjectsAreaSocialMediaMessage = styled("aside", {
+export const ProjectsAreaSocialMediaMessage = stl("aside", {
   width: "32%",
   display: "flex",
   flexDirection: "column",
@@ -72,16 +150,17 @@ export const ProjectsAreaSocialMediaMessage = styled("aside", {
   },
 });
 
-export const ProjectsAreaContent = styled("div", {
+export const ProjectsAreaContent = stl("div", {
   width: "60%",
   paddingLeft: "4rem",
+  gap: "5rem",
   "@mobile": {
     width: "100%",
     paddingLeft: "0",
   },
 });
 
-export const ProjectAreaWrapperColumns = styled(Flex, {
+export const ProjectAreaWrapperColumns = stl(Flex, {
   position: "relative",
   alignItems: "flex-start",
   "@mobile": {

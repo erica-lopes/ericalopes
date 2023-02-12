@@ -8,7 +8,7 @@ interface GlobalStyleProps {
 export const Container = styled("div", {
   maxWidth: "$container",
   margin: "0 auto",
-  padding: "0 1rem",
+  padding: "0 5rem",
 });
 
 export const Flex = styled("div", {
@@ -21,28 +21,35 @@ export const colors = {
     brand1: {
       color: "$brand1",
     },
-
+    brand3: {
+      color: "$brand3",
+    },
+    brand4: {
+      color: "$brand4",
+    },
     grey1: {
       color: "$grey1",
     },
-
     grey2: {
       color: "$grey2",
     },
-
     grey3: {
       color: "$grey3",
     },
-
     grey4: {
       color: "$grey4",
     },
-
     grey5: {
       color: "$grey5",
     },
     grey6: {
       color: "$grey6",
+    },
+    grey7: {
+      color: "$grey7",
+    },
+    white: {
+      color: "$whiteFixed"
     },
   },
 };
@@ -63,18 +70,21 @@ export const globalStyles = globalCss({
 export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
   const theme = createTheme({
     colors: {
-      brand1: "#5C63ED",
-      brand2: "#7D82F1",
-      brand3: "#BEC1F8",
-      brand4: "#E7E8FC",
+      brand1: "#f26278",
+      brand2: "#dcc9c5",
+      brand3: "#bcbcb4",
+      brand4: "#f9f4df",
+
       grey1: "#212529",
-      grey2: "#495057",
+      grey2: "#4E4B48",
       grey3: "#CED3D7",
       grey4: "#F1F3F5",
       grey5: "#F8F9FA",
       grey6: "#DEE0FB",
-      whiteFixed: "#ffffff",
-      mode: "#ffffff",
+      grey7: "#FFFFFF",
+
+      whiteFixed: "#FFFFFF",
+      mode: "#bcbcb4",
     },
     sizes: {
       container: "75rem",
@@ -116,6 +126,8 @@ export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
     radii: {
       1: "0.5rem",
       2: "0.25rem",
+      3: "2rem 2rem 0 2rem",
+      4: "6rem",
     },
   });
 

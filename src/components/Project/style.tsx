@@ -1,13 +1,17 @@
 import { styled } from "../../styles/stitches.config";
-import { Flex } from "../../styles/Global"
-import { Text } from "../../styles/Text"
+import { Flex } from "../../styles/Global";
 
 export const Project = styled("article", {
   marginTop: "4rem",
+  "@mobile": {
+    marginLeft: "1rem",
+  },
 });
 
 export const ProjectStack = styled(Flex, {
   margin: "1.25rem 0 1.25rem 0",
+  borderStyle: "solid 1rem",
+  
 });
 
 export const ProjectStackTech = styled("span", {
@@ -30,11 +34,11 @@ export const ProjectLink = styled("a", {
   alignItems: "center",
   lineHeight: "0",
 
-  "&:hover":{
-    color: "$grey1"
+  "&:hover": {
+    color: "$grey1",
   },
 
   [`& svg`]: {
-    marginRight: "$1"
-  }
+    marginRight: "$1",
+  },
 });

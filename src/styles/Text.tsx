@@ -6,11 +6,12 @@ const headingsDefaultConfig = {
 }
 
 const bodyDefaultConfig = {
-    fontFamily: "$texts"
+    fontFamily: "$texts",
+
 }
 
 export const Text = styled("p", {
-    color: "$grey1",
+    color: "$brand1",
     fontSize: "$text1",
     fontWeight: 400,
     variants: {
@@ -18,7 +19,7 @@ export const Text = styled("p", {
             heading1: {
                 fontSize: "$title1",
                 lineHeight: "$title1",
-                fontWeight: 700,
+                fontWeight: 900,
                 ...headingsDefaultConfig,
                 "@mobile": {
                     fontSize: "$title1Mobile",
