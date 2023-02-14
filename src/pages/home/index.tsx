@@ -32,6 +32,8 @@ import {
 } from "./style";
 
 export const Home = (): JSX.Element => {
+  // const isWide = useMedia({ maxWidth: "1150px" });
+
   return (
     <main id="home">
       <Header>
@@ -44,6 +46,7 @@ export const Home = (): JSX.Element => {
           </HeaderContent>
         </Container>
       </Header>
+      
       <Banner>
         <Container>
           <Static>

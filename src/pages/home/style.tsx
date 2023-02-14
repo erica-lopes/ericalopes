@@ -41,7 +41,6 @@ export const Div = stl("div", {
   textAlign: "center",
   visibility: "visible",
   "@mobile": {
-    maxWidth: "100px",
     visibility: "hidden",
   },
 });

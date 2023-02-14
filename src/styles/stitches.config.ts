@@ -3,7 +3,7 @@ import { createStitches } from "@stitches/react";
 
 export const { styled } = createStitches({
   media: {
-    mobile: "(max-width: 991px)",
+    mobile: "(max-width: 1150px)",
   },
   utils: {
     marginX: (value: string) => ({

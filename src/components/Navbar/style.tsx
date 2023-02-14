@@ -21,12 +21,12 @@ export const Navbar = styled("nav", {
 });
 
 export const LogoTipo = styled(Flex, {
-  marginLeft: "1rem",
+  marginLeft: "$title1",
   alignItems: "center",
 });
 
-export const LogoTipoText = styled("span", {
-  fontSize: "1",
+export const LogoTipoText = styled("p", {
+  fontSize: "1.5rem",
   fontWeight: 200,
   color: "$grey7",
   fontFamily: '"Homemade Apple"',

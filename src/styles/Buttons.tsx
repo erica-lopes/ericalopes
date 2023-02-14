@@ -39,6 +39,7 @@ export const Button = styled("button", {
       icon: {
         borderColor: "transparent",
         backgroundColor: "transparent",
+        color: "$whiteFixed",
         "&:hover": {
           backgroundColor: "$grey5",
         },

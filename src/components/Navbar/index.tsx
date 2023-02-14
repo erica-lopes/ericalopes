@@ -21,7 +21,7 @@ export interface MenuButtonOpen {
 }
 
 export const NavBar = (): JSX.Element => {
-  const isWide = useMedia({ maxWidth: "991px" });
+  const isWide = useMedia({ maxWidth: "1150px" });
 
   document.title = userData.nameUser;
 
