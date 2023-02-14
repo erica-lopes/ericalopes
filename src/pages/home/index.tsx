@@ -6,7 +6,6 @@ import { Button } from "@/styles/Buttons";
 // Components
 import { Stack } from "@/components/Stack";
 import { Project } from "@/components/Project";
-// import { About } from "@/components/About/style";
 
 // Data
 import { stackData } from "@/utils/stackData";
@@ -32,8 +31,6 @@ import {
 } from "./style";
 
 export const Home = (): JSX.Element => {
-  // const isWide = useMedia({ maxWidth: "1150px" });
-
   return (
     <main id="home">
       <Header>
@@ -46,7 +43,7 @@ export const Home = (): JSX.Element => {
           </HeaderContent>
         </Container>
       </Header>
-      
+
       <Banner>
         <Container>
           <Static>
@@ -60,7 +57,7 @@ export const Home = (): JSX.Element => {
               </Text>
             </Div>
 
-            <img width="600px" src="src/public/static/img/banner.png" alt="" />
+            <img width="600px"src="https://i.ibb.co/ZWJDdYn/banner.png" alt="banner"/>
 
             <Div>
               <Text type="heading1" color="grey2">
