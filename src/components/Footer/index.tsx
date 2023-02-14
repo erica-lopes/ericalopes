@@ -76,7 +76,7 @@ export const Footer = (): JSX.Element => {
               type="primary"
               target="_blank"
               as="a"
-              href={`https://github.com/ZooMedProject/zooMed`} //Colocar link desse código no lugar do ZooMed*************
+              href={`https://github.com/erica-lopes/ericalopes`}
             >
               Source Code
             </Btn>
